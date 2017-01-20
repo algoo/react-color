@@ -167,6 +167,7 @@ export class ChromeFields extends React.Component {
             label="hex" value={ this.props.hex }
             onChange={ this.handleChange }
             onKeyPress={ this.props.onKeyPress }
+            setInputFocus={ this.props.setInputFocus }
           />
         </div>
       </div>)
@@ -179,6 +180,7 @@ export class ChromeFields extends React.Component {
             value={ this.props.rgb.r }
             onChange={ this.handleChange }
             onKeyPress={ this.props.onKeyPress }
+            setInputFocus={ this.props.setInputFocus }
           />
         </div>
         <div style={ styles.field }>
@@ -188,6 +190,7 @@ export class ChromeFields extends React.Component {
             value={ this.props.rgb.g }
             onChange={ this.handleChange }
             onKeyPress={ this.props.onKeyPress }
+            setInputFocus={ this.props.setInputFocus }
           />
         </div>
         <div style={ styles.field }>
@@ -197,6 +200,7 @@ export class ChromeFields extends React.Component {
             value={ this.props.rgb.b }
             onChange={ this.handleChange }
             onKeyPress={ this.props.onKeyPress }
+            setInputFocus={ this.props.setInputFocus }
           />
         </div>
         <div style={ styles.alpha }>
@@ -207,6 +211,7 @@ export class ChromeFields extends React.Component {
             arrowOffset={ 0.01 }
             onChange={ this.handleChange }
             onKeyPress={ this.props.onKeyPress }
+            setInputFocus={ this.props.setInputFocus }
           />
         </div>
       </div>)
@@ -219,6 +224,7 @@ export class ChromeFields extends React.Component {
             value={ Math.round(this.props.hsl.h) }
             onChange={ this.handleChange }
             onKeyPress={ this.props.onKeyPress }
+            setInputFocus={ this.props.setInputFocus }
           />
         </div>
         <div style={ styles.field }>
@@ -228,6 +234,7 @@ export class ChromeFields extends React.Component {
             value={ `${ Math.round(this.props.hsl.s * 100) }%` }
             onChange={ this.handleChange }
             onKeyPress={ this.props.onKeyPress }
+            setInputFocus={ this.props.setInputFocus }
           />
         </div>
         <div style={ styles.field }>
@@ -237,6 +244,7 @@ export class ChromeFields extends React.Component {
             value={ `${ Math.round(this.props.hsl.l * 100) }%` }
             onChange={ this.handleChange }
             onKeyPress={ this.props.onKeyPress }
+            setInputFocus={ this.props.setInputFocus }
           />
         </div>
         <div style={ styles.alpha }>
@@ -246,6 +254,7 @@ export class ChromeFields extends React.Component {
             value={ this.props.hsl.a }
             arrowOffset={ 0.01 }
             onChange={ this.handleChange }
+            setInputFocus={ this.props.setInputFocus }
             onKeyPress={ this.props.onKeyPress }
           />
         </div>

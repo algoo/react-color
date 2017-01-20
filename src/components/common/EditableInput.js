@@ -22,6 +22,10 @@ export class EditableInput extends (PureComponent || Component) {
     }
   }
 
+  componentDidMount() {
+    if (this.props.setInputFocus) this.textInput.focus()
+  }
+
   componentWillUnmount() {
     this.unbindEventListeners()
   }
@@ -131,6 +135,7 @@ export class EditableInput extends (PureComponent || Component) {
           onChange={ this.handleChange }
           onBlur={ this.handleBlur }
           placeholder={ this.props.placeholder }
+          ref={input => this.textInput = input}
         />
         { this.props.label ? (
           <span style={ styles.label } onMouseDown={ this.handleMouseDown }>
