@@ -201,7 +201,7 @@ class HomeFeature extends React.Component {
                   <ChromePicker
                     color={ this.state }
                     onChangeComplete={ this.handleChangeComplete }
-                    // setInputFocus
+                    setInputFocus
                   />
                   <div style={ styles.whiteLabel }>Chrome</div>
                 </Move>

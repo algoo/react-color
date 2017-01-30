@@ -26763,7 +26763,6 @@
 	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      console.log('componentDidMount', this.props.setInputFocus);
 	      if (this.props.setInputFocus) this.textInput.focus();
 	    }
 	  }, {
@@ -26800,9 +26799,8 @@
 	        'div',
 	        { style: styles.wrap },
 	        _react2.default.createElement('input', {
-	          style: styles.input
-	          // ref="input"
-	          , value: this.state.value,
+	          style: styles.input,
+	          value: this.state.value,
 	          onKeyDown: this.handleKeyDown,
 	          onChange: this.handleChange,
 	          onBlur: this.handleBlur,
