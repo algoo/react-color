@@ -25770,7 +25770,8 @@
 	                  },
 	                  _react2.default.createElement(_reactColor.ChromePicker, {
 	                    color: this.state,
-	                    onChangeComplete: this.handleChangeComplete
+	                    onChangeComplete: this.handleChangeComplete,
+	                    setInputFocus: true
 	                  }),
 	                  _react2.default.createElement(
 	                    'div',
@@ -26762,6 +26763,7 @@
 	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
+	      console.log('componentDidMount', this.props.setInputFocus);
 	      if (this.props.setInputFocus) this.textInput.focus();
 	    }
 	  }, {
@@ -26797,17 +26799,18 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { style: styles.wrap },
-	        _react2.default.createElement('input', _defineProperty({
-	          style: styles.input,
-	          ref: 'input',
-	          value: this.state.value,
+	        _react2.default.createElement('input', {
+	          style: styles.input
+	          // ref="input"
+	          , value: this.state.value,
 	          onKeyDown: this.handleKeyDown,
 	          onChange: this.handleChange,
 	          onBlur: this.handleBlur,
-	          placeholder: this.props.placeholder
-	        }, 'ref', function ref(input) {
-	          return _this2.textInput = input;
-	        })),
+	          placeholder: this.props.placeholder,
+	          ref: function ref(input) {
+	            return _this2.textInput = input;
+	          }
+	        }),
 	        this.props.label ? _react2.default.createElement(
 	          'span',
 	          { style: styles.label, onMouseDown: this.handleMouseDown },
