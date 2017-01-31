@@ -23,7 +23,6 @@ export class EditableInput extends (PureComponent || Component) {
   }
 
   componentDidMount() {
-    console.log('gni : ', this.props.setInputFocus)
     if (this.props.setInputFocus) this.textInput.focus()
   }
 
